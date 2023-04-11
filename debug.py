@@ -7,9 +7,14 @@ from lib.classes.planet import Planet
 
 if __name__ == '__main__':
     #  CREATE PLANETS AND ALIENS TO TEST HERE ###
+    a1 = Alien('bob', 'bobbertson', 5)
+
+    a2 = Alien('alice', 'bobbertson', 8)
+
+    a3 = Alien('jim', 'bobbertson', 7)
 
 
 
 
 
-    pdb.set_trace()
+    # ipdb.set_trace()
