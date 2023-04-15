@@ -69,47 +69,46 @@ build out any helper methods if needed.
   - Returns the `Alien`'s age
   - Age must be an integer 0 or greater
 - `Alien save()`
-  - Creates an alien in the database if the alien instance has no id
-  - Updates an alien in the database if the alien instance has an id
+  - Creates an `Alien` in the database if the `Alien` instance has no id
+  - Updates an `Alien` in the database if the `Alien` instance has an id
 - `Alien classmethod query_all()`
-  - Returns a list of alien instances based on rows in the database
-  - The return value ought to be a list of Alien instances
+  - Returns a list of `Alien` instances based on rows in the database
+  - The return value ought to be a list of `Alien` instances
 
 #### Planet
 
 - `Planet __init__(name)`
   - `Planet` is initialized with a name (string) and population (integer)
-  - Population **can be** changed after the Planet is initialized
 - `Planet __repr__()`
   - Returns a string formatted like the one below:
   - `<Planet id={id} name={name}>`
 - `Planet property name()`
-  - Returns the Planet's name
+  - Returns the `Planet`'s name
   - Names must be strings between 3 and 15 characters long
 - `Planet save()`
-  - Creates a planet in the database if a planet with the same id doesn't exist
-  - Updates a planet in the database if a planet with the same id exists
+  - Creates a `Planet` in the database if a `Planet` with the same id doesn't exist
+  - Updates a `Planet` in the database if a `Planet` with the same id exists
 - `Planet classmethod query_one(id)`
-  - Returns a planet instance from the database with the matching id
-  - The return value ought to be a Planet instance
-  - Return None if no Planet exists with that id
+  - Returns a `Planet` instance from the database with the matching id
+  - The return value ought to be a `Planet` instance
+  - Return None if no `Planet` exists with that id
 
 ### Aggregate and Association Methods
 
 #### Alien
 
 - `Alien planet()`
-  - Returns the associated Planet for the alien if the planet exists
-  - The returned value ought to be a Planet instance or None
+  - Returns the associated `Planet` if it exists for the `Alien`
+  - The returned value ought to be a `Planet` instance or None
 - `Planet aliens()`
-  - Returns all associated Aliens for the planet as a list
-  - The return value ought to be a list of Alien instances
+  - Returns all associated `Alien`s for the `Planet` as a list
+  - The return value ought to be a list of `Alien` instances
 - `Alien.move_to(planet)`
-  - Takes in an instance of the Planet class
-  - Updates the Alien instance so it now belongs to that Planet
+  - Takes in an instance of the `Planet` class
+  - Updates the `Alien` instance so it now belongs to that `Planet`
 - `Alien classmethod query_average_age()`
-  - Returns the average age for all aliens in the database
-  - The average is the sum of all ages divided by the number of aliens (think `len()`)
+  - Returns the average age for all `Alien`s in the database
+  - The average is the sum of all ages divided by the number of `Alien`s
 - `Planet classmethod query_oldest_citizen()`
-  - Returns the oldest Alien associated with the Planet as an Alien instance
-  - If the Planet has no associated Aliens, return None
+  - Returns the oldest `Alien` associated with the `Planet` as an `Alien` instance
+  - If the `Planet` has no associated `Alien`s, return None
