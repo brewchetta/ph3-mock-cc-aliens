@@ -109,6 +109,6 @@ build out any helper methods if needed.
 - `Alien classmethod query_average_age()`
   - Returns the average age for all `Alien`s in the database
   - The average is the sum of all ages divided by the number of `Alien`s
-- `Planet classmethod query_oldest_citizen()`
+- `Planet query_oldest_citizen()`
   - Returns the oldest `Alien` associated with the `Planet` as an `Alien` instance
   - If the `Planet` has no associated `Alien`s, return None
