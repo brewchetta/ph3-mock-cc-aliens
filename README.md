@@ -15,6 +15,7 @@ A `Planet` has many `Alien`s. An `Alien` belongs to a `Planet`.
 - Variable Scope
 - lists and list Methods
 - SQL queries
+- SQL joins and associations
 - ORM methods
 
 ## Instructions
