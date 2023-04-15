@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import pdb
+import ipdb
 from lib import CONN, CURSOR
 from lib.classes.alien import Alien
 from lib.classes.planet import Planet
@@ -12,4 +12,4 @@ if __name__ == '__main__':
 
 
 
-    pdb.set_trace()
+    ipdb.set_trace()

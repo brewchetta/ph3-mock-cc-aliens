@@ -2,34 +2,16 @@ from lib import CONN, CURSOR
 
 class Alien:
 
-    def __init__(self, first_name, last_name, age):
-        pass
-
-    # age property goes here
-
-    def full_name(self):
-        pass
-
-    def save(self):
-        # updates the alien in the database
-        pass
-
+    # CALL THIS METHOD TO CREATE YOUR TABLE #
     @classmethod
-    def query_all(cls):
-        # gets all aliens in the database and returns a list of aliens as instances
-        pass
+    def create_table(cls):
+        sql = """CREATE TABLE IF NOT EXISTS aliens (
+        id INTEGER PRIMARY KEY,
+        first_name TEXT,
+        last_name TEXT,
+        age INTEGER,
+        planet_id PRIMARY KEY
+        )"""
+        CURSOR.execute(sql)
 
-    @classmethod
-    def query_one(cls, id):
-        # gets an alien in the database by its id and returns that alien as an instance
-        pass
-
-    @classmethod
-    def average_age(cls):
-        # creates and returns an average age of all aliens
-        pass
-
-    @classmethod
-    def query_oldest(cls):
-        # returns the oldest alien by age as an instance
-        pass
+    # WRITE YOUR CODE BELOW #

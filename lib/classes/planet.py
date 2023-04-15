@@ -2,16 +2,13 @@ from lib import CONN, CURSOR
 
 class Planet:
 
-    def __init__(self, name):
-        pass
-
-    # name property goes here
-
-    def save(self):
-        # updates the planet in the database
-        pass
-
+    # CALL THIS METHOD TO CREATE YOUR TABLE #
     @classmethod
-    def query_one(cls, id):
-        # gets a planet in the database by its id and returns that planet as an instance
-        pass
+    def create_table(cls):
+        sql = """CREATE TABLE IF NOT EXISTS planets (
+        id INTEGER PRIMARY KEY,
+        name TEXT
+        )"""
+        CURSOR.execute(sql)
+
+    # WRITE YOUR CODE BELOW #
